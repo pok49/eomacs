@@ -28,14 +28,15 @@ alphabet; there are 4 free English letters (QWXY) which are not used
 in Esperanto and thus can be taken for its extra letters; but 2
 remainig letters have to be taken from the variant zone, and the most
 natural candidates are the keys `D11` and `D12`, according to the
-numeration of [ISO/IEC 9995-2:2009](https://en.wikipedia.org/wiki/ISO/IEC_9995)[^1 ]:
+numeration of [ISO/IEC 9995-2:2009](https://en.wikipedia.org/wiki/ISO/IEC_9995)[^1]—
 
 ![Standard Keyboard Alphanumeric Section](doc/Keyboard-alphanumeric-section-ISOIEC-9995-2-2009-with-amd1-2012.png)
 
 In the US keyboard these are `[`∖`{` and `}`∖`]`. I use the folloing map:
 
 | Ĉ ĉ | Ĝ ĝ | Ĥ ĥ | Ĵ ĵ | Ŝ ŝ | Ŭ ŭ | ʼ |
-| X x | Y y | } ] | { [ | Q q | W w | ` |
+| :-: | :-: | :-: | :-: | :-: | :-: |:-:|  
+| `X x` | `Y y` | `} ]` | `{ [` | `Q q` | `W w` | ``\`` |
 
 The Quail method maps character to character, not key to character.
 E.g. the **B01** key, which produces W in ASERTY, Y in QWERTZ (and Z in
