@@ -32,11 +32,17 @@ numeration of [ISO/IEC 9995-2:2009](https://en.wikipedia.org/wiki/ISO/IEC_9995)[
 
 ![Standard Keyboard Alphanumeric Section](doc/Keyboard-alphanumeric-section-ISOIEC-9995-2-2009-with-amd1-2012.png)
 
-In the US keyboard these are `[`∖`{` and `}`∖`]`. I use the folloing map:
+In the US keyboard these are `[`∖`{` and `}`∖`]`. I use the following map:
 
 | Ĉ ĉ | Ĝ ĝ | Ĥ ĥ | Ĵ ĵ | Ŝ ŝ | Ŭ ŭ | ʼ |
 | :-: | :-: | :-: | :-: | :-: | :-: |:-:|  
-| `X x` | `Y y` | `} ]` | `{ [` | `Q q` | `W w` | ``\`` |
+| `X x` | `Y y` | `} ]` | `{ [` | `Q q` | `W w` | <code>;\`</code> |
+
+The *letter apostrophe* U+02BC (ʼ) is listed here, because in Esperanto
+it must be considered as a word constituent — see my article *[Pri
+apostrofoj kaj citiloj en Esperanto](https://lingvakritiko.com/2024/04/01/pri-la-apostrofoj-kaj-citiloj-en-esperanto/)* (in Esperanto). For pracical
+reason also the *single comma quotation mark* U+2019 (’) is made
+available as `;,`.
 
 The Quail method maps character to character, not key to character.
 E.g. the **B01** key, which produces W in ASERTY, Y in QWERTZ (and Z in

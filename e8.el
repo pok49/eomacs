@@ -1,6 +1,6 @@
 ;;; quail/e8.el -- Quail package for inputting Esperanto -*- coding: utf-8 -*-
 
-;; Copyright (C) 1999 Sergio Pokrovskij
+;; Copyright (C) 1999, 2025 by Sergio Pokrovskij
 ;; Many TeX definitions are stolen from unicode-input.el by Florian Weimer
 
 ;; Keywords: multilingual, input method, Esperanto, TeX
@@ -39,12 +39,12 @@ it with semicolon.
 Other characters:
     effect   | prefix | examples
  ------------+--------+----------
-    acute    |   ;'    | ;'a -> á   '' -> ?´
-    grave    |   ;`    | ;`a -> à
-  circumflex |   ;^    | ;^a -> â
-  diaeresis  |   ;\"   | ;\"a -> ä  ;\"{} -> ¨
-   cedilla   |   ;c    | ;cc -> ç   ;c{} -> ¸
-  dot above  |   ;.    | ;.g -> ġ   ;.z -> ż   ;.I -> İ
+    acute    |   ;'   | ;'a -> á   '' -> ?´
+    grave    |   ;`   | ;`a -> à
+  circumflex |   ;^   | ;^a -> â
+  diaeresis  |   ;\"  | ;\"a -> ä  ;\"{} -> ¨
+   cedilla   |   ;c   | ;cc -> ç   ;c{} -> ¸
+  dot above  |   ;.   | ;.g -> ġ   ;.z -> ż   ;.I -> İ
 " nil t nil nil nil nil nil nil nil nil t)
 
 (quail-define-rules
@@ -56,8 +56,8 @@ Other characters:
  ("w"  ?ŭ) ("W"  ?Ŭ) (";w" ?w) (";W" ?W)
 
 ;; Apostrofoj:
- ("`'" ?ʼ) (";`" ?`)	; letter apostrophe (U+02BC), or
- (";'" ?’)		; single comma quotation mark (U+2019)
+ (";`" ?ʼ)	; letter apostrophe (U+02BC), or
+ (";," ?’)	; single comma quotation mark (U+2019)
 
 ; Punctuation:
 ;; Quotation marks:
@@ -66,16 +66,15 @@ Other characters:
  (";\"<" ?“) (";\">" ?”) (";\"," ?„)	; “foo” or „bar“
  (";'<"  ?‘) (";'>"  ?’) (";',"  ?‚)	; ‘foo’ or ‚bar‘
 
- (";  "  ? ) ; NBSP
- (";-- " ?­) ; SHY
+ (";_"   ? ) ; NBSP (U+00A0)
+ (";-- " ?­) ; SHY (U+00AD)
  (";---" ?—) ; em dash
  (";--." ?—) ; en dash
 ; minuso ‒ ??--------------(FIG, MATH)
  (";.."  ?…)
 
- (";!!" ?¡) ; inverted !
- (";??"  ?¿)
- (";SO"  ?§) (";PP"  ?¶)
+ (";!!" ?¡) (";??" ?¿) ; inverted ! and ?
+ (";SO" ?§) (";PP"  ?¶)
 
  (";oo" ?°)
  (";%o" ?‰)  ; per mille
@@ -419,11 +418,6 @@ Other characters:
  (";langle" ?〈)   (";rangle" ?〉)
  (";lceil" ?⌈)    (";rceil" ?⌉) 
 
- ;; Alternate names
-
- (";vert" ?∣)
- (";Vert" ?∥)
-
  ;; Non-math symbols
  (";dag" ?†) (";ddag" ?‡)
 
@@ -432,7 +426,6 @@ Other characters:
  (";lq" ?‘) (";rq" ?’) ; pok
  (";-" ?‐)     ; 2010 (HYPHEN)
  (";minus" ?−) ; 2212 (MINUS MATH)
- (";_" ? )     ; pok; A0 (NO-BREAK SPACE)
  (";!" ?¡) (";?" ?¿) ; as in EuroTeX
 ; (";<" ?«) (";>" ?»)
  (";%" ?‱) ; pok
@@ -441,23 +434,22 @@ Other characters:
  (";5" ?½) ; 0.5, \textonehalf
  (";75" ?¾); 0.75, \textthreequarters
 
- ;; Combining characters
-
- (";'{}" ?́)
- (";`{}" ?̀)
- (";^{}" ?̂)
- (";\"{}" ?̈)
- (";~{}" ?̃)
- (";={}" ?̄)
- (";.{}" ?̇)
- (";u{}" ?̆)
- (";v{}" ?̌)
- (";H{}" ?̋)
- (";t{}" ?͡)
- (";c{}" ?̧)
- (";k{}" ?̨)
- (";d{}" ?̣)
- (";b{}" ?̱)
+ ;; Combining characters (to be postpositioned):
+ (";'}" ?́)
+ (";`}" ?̀)
+ (";^}" ?̂)
+(";\"}" ?̈)
+ (";~}" ?̃)
+ (";=}" ?̄)
+ (";.}" ?̇)
+ (";u}" ?̆)
+ (";v}" ?̌)
+ (";H}" ?̋)
+ (";t}" ?͡)
+ (";c}" ?̧)
+ (";k}" ?̨)
+ (";d}" ?̣)
+ (";b}" ?̱)
 
  ;; Subscripts
 
@@ -500,13 +492,13 @@ Other characters:
  ("^o" ?º) ; pok
 
 
-;  ;; \mathbb
-; 
-;  ("|C" ?ℂ)
-;  ("|H" ?ℍ)
-;  ("|N" ?ℕ)
-;  ("|Z" ?ℤ)
-;  ("|P" ?ℙ)
-;  ("|Q" ?ℚ)
-;  ("|R" ?ℝ)
+  ;; \mathbb
+ 
+  (";!C" ?ℂ)
+  (";!H" ?ℍ)
+  (";!N" ?ℕ)
+  (";!Z" ?ℤ)
+  (";!P" ?ℙ)
+  (";!Q" ?ℚ)
+  (";!R" ?ℝ)
 )
