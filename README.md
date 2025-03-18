@@ -18,7 +18,7 @@ characters folllowing a semicolon do not form a symbol name defined in
 this `e8` method, then the semicolon and the following string are
 inputted “as is”; in particular,  ‘`; SPC`’ is “semicolon followed by a
 space”; so that a reliable method to input a semicolon (even before a
-string which coincides with an ``e8`` symbol name) is to type  ‘`; SPC BackSpace`’.
+string which coincides with an ``e8`` symbol name) is to type  ‘`; SPC BackSpace`’.
 
 ### The Direct Method
 For definiteness assume that we are using a common US QWERTY keyboard.
